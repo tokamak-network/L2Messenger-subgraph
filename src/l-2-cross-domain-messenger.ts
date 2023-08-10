@@ -18,6 +18,7 @@ export function handleAdminChanged(event: AdminChangedEvent): void {
   entity.save()
 }
 
+
 export function handleUpgraded(event: UpgradedEvent): void {
   let entity = new Upgraded(
     event.transaction.hash.concatI32(event.logIndex.toI32())
