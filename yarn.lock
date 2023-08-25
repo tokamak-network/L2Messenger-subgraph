@@ -256,7 +256,7 @@
   dependencies:
     assemblyscript "0.19.10"
 
-"@graphprotocol/graph-ts@0.29.1":
+"@graphprotocol/graph-ts@^0.29.1":
   version "0.29.1"
   resolved "https://registry.npmjs.org/@graphprotocol/graph-ts/-/graph-ts-0.29.1.tgz"
   integrity sha512-GhAP2ijk3cTM0xBjoAFxEmdZbYl1BueCYqAGw5G7UyBX3EV8FWkvD5DMam6IkLGqXasBmelCFrROK3B5t6zVdg==
