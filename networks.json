@@ -1,8 +1,8 @@
 {
-  "optimism": {
+  "titan-goerli": {
     "L2CrossDomainMessenger": {
       "address": "0x4200000000000000000000000000000000000007",
-      "startBlock": 102
+      "startBlock": 0
     }
   }
 }

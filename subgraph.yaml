@@ -4,24 +4,27 @@ schema:
 dataSources:
   - kind: ethereum
     name: L2CrossDomainMessenger
-    network: optimism
+    network: titan
     source:
       address: "0x4200000000000000000000000000000000000007"
       abi: L2CrossDomainMessenger
-      startBlock: 102
+      startBlock: 0
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.7
       language: wasm/assemblyscript
       entities:
-        - AdminChanged
-        - Upgraded
+        - FailedRelayedMessage
+        - RelayedMessage
+        - SentMessage
       abis:
         - name: L2CrossDomainMessenger
           file: ./abis/L2CrossDomainMessenger.json
       eventHandlers:
-        - event: AdminChanged(address,address)
-          handler: handleAdminChanged
-        - event: Upgraded(indexed address)
-          handler: handleUpgraded
+        - event: FailedRelayedMessage(indexed bytes32)
+          handler: handleFailedRelayedMessage
+        - event: RelayedMessage(indexed bytes32)
+          handler: handleRelayedMessage
+        - event: SentMessage(indexed address,address,bytes,uint256,uint256)
+          handler: handleSentMessage
       file: ./src/l-2-cross-domain-messenger.ts
