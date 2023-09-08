@@ -24,3 +24,16 @@ type SentMessage @entity(immutable: true) {
   blockTimestamp: BigInt!
   transactionHash: Bytes!
 }
+
+type DepositFinalized @entity(immutable: true) {
+  id: Bytes!
+  _l1Token: Bytes! # address
+  _l2Token: Bytes! # address
+  _from: Bytes! # address
+  _to: Bytes! # address
+  _amount: BigInt! # uint256
+  _data: Bytes! # bytes
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+}
